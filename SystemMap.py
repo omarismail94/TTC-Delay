@@ -60,5 +60,5 @@ system = SubwayLine('lines.txt')
 
 
 eastbound = Search(system)
-eastbound.depthFirstSearch(system, "BATHURST")
+eastbound.depthFirstSearch(system, "DUNDAS WEST")
 eastbound.count()
