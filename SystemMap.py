@@ -55,10 +55,17 @@ class Search(object):
     def count(self):
         print(f"The number of connected stations is: {sum(self.marked)}")
 
+    def connectedStations(self):
+        print( [self.keys[i] for i in range(len(self.marked)) if self.marked[i]]) 
+
 
 system = SubwayLine('lines.txt')
 
 
-eastbound = Search(system)
-eastbound.depthFirstSearch(system, "DUNDAS WEST")
-eastbound.count()
+lineTwo = Search(system)
+lineTwo.depthFirstSearch(system, "DUNDAS WEST")
+lineTwo.connectedStations()
+
+lineOne = Search(system)
+lineOne.depthFirstSearch(system,"DUNDAS")
+lineOne.connectedStations()
